@@ -15,6 +15,11 @@ public class RequestController {
     @Autowired
     private RequestService requestService;
 
+    @GetMapping("/test")
+    public String test() {
+        return "REQUEST CONTROLLER WORKING";
+    }
+
     @PostMapping("/create")
     public FoodRequest createRequest(@RequestParam Long userId,
                                       @RequestParam Long foodId) {
